@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інтегровані таблиці та гіперпосилання</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+        h2, h3 {
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .table-wrapper, .section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 600px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        ul {
+            list-style-type: disc;
+        }
+        .navigation, .news {
+            width: 20%;
+        }
+        .content {
+            width: 60%;
+        }
+        .map {
+            position: relative;
+        }
+        .map img {
+            width: 100%;
+            height: auto;
+        }
+        .map area {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Таблиці -->
+    <h2>Таблиця а)</h2>
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <td style="width: 25%;"></td>
+                <td style="width: 25%;"></td>
+                <td style="width: 25%;"></td>
+                <td rowspan="3" style="width: 25%;"></td>
+            </tr>
+            <tr>
+                <td style="height: 50px;"></td>
+                <td style="height: 50px;"></td>
+                <td style="height: 50px;"></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="height: 50px;"></td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Таблиця б)</h2>
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <td colspan="5"></td>
+            </tr>
+            <tr>
+                <td rowspan="3"></td>
+                <td colspan="3"></td>
+                <td rowspan="3"></td>
+            </tr>
+            <tr>
+                <td rowspan="3"></td>
+                <td colspan="1" rowspan="1"></td>
+                <td rowspan="3"></td>
+            </tr>
+            <tr>
+                <td colspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Таблиця в)</h2>
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <td colspan="2" class="header">1. Заголовок сайту</td>
+            </tr>
+            <tr>
+                <td class="navigation" rowspan="2">2. Навігація</td>
+                <td class="content">4. Основний контент</td>
+            </tr>
+            <tr>
+                <td class="news">3. Новини</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="footer">5. Реквізити</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- 2. Гіперпосилання і шаблон електронної книжки -->
+    <h3>2. Шаблон електронної книжки</h3>
+    <div class="section">
+        <h4>Глава 1: Вступ</h4>
+        <p>Це перша глава електронної книжки. Дізнайтеся більше про наші <a href="https://example.com">курси</a> або прочитайте про <a href="https://example.com/about">історію компанії</a>.</p>
+        <ul>
+            <li>Перший пункт</li>
+            <li>Другий пункт</li>
+            <li>Третій пункт</li>
+        </ul>
+        <img src="pict.png" alt="Приклад малюнку" />
+    </div>
+
+    <!-- 2.2 Альбом фотографій -->
+    <h3>2.2. Альбом фотографій</h3>
+    <div class="section">
+        <img src="1.jfif" alt="Фото 1" />
+        <img src="2.jfif" alt="Фото 2" />
+        <img src="3.jfif" alt="Фото 3" />
+    </div>
+
+    <!-- 3. Карта посилань -->
+    <h3>3. Карта посилань</h3>
+    <div class="section map">
+        <img src="map.jfif" alt="Карта" usemap="#mymap">
+        <map name="mymap">
+            <area shape="rect" coords="50,50,150,150" href="https://example.com" alt="Посилання 1">
+            <area shape="circle" coords="300,200,50" href="https://example.com/about" alt="Посилання 2">
+            <area shape="poly" coords="400,100,450,150,400,200,350,150" href="https://example.com/contact" alt="Посилання 3">
+        </map>
+    </div>
+
+</body>
+</html>
